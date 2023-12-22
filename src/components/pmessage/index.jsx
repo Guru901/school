@@ -1,9 +1,11 @@
 import React from "react";
-import "./style.css";
 const pmessage = () => {
   return (
     <div className="msg-container absolute-center">
-      <h1>Principle Message</h1>
+      <h1>
+        Principle
+        <span> Message</span>
+      </h1>
       <div className="msg absolute-center">
         <img
           src="https://www.dpskolkata.com/wp-content/uploads/2023/02/principal.jpg"

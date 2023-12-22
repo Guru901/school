@@ -15,3 +15,17 @@
   font-size: 2rem;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .cards {
+    height: 5rem;
+  }
+  .card-1,
+  .card-2,
+  .card-3 {
+    height: 100%;
+  }
+  .card-title {
+    font-size: 1.5rem;
+  }
+}

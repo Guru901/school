@@ -1,6 +1,6 @@
 .msg-container {
   flex-direction: column;
-  align-items: flex-start;
+  width: 100vw;
   gap: 2rem;
   margin-top: 5rem;
 }

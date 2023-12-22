@@ -1,12 +1,68 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
+import { RiMenu2Line } from "react-icons/ri";
 
 const Navbar = () => {
+  const navBottomMenuRef = useRef(null);
+  const navTopMenuRef = useRef(null);
+
+  useEffect(() => {
+    const handleDocumentClick = (event) => {
+      const isNavBottomMenuClick =
+        navBottomMenuRef.current &&
+        navBottomMenuRef.current.contains(event.target);
+      const isNavTopMenuClick =
+        navTopMenuRef.current && navTopMenuRef.current.contains(event.target);
+
+      if (!isNavBottomMenuClick && !isNavTopMenuClick) {
+        closeMenus();
+      }
+    };
+
+    document.addEventListener("click", handleDocumentClick);
+
+    return () => {
+      document.removeEventListener("click", handleDocumentClick);
+    };
+  }, []);
+
+  const closeMenus = () => {
+    const navBottomMenu = document.querySelector(".nav-bottom-menu");
+    const navTopMenu = document.querySelector(".nav-top-menu");
+
+    if (navBottomMenu) {
+      navBottomMenu.classList.remove("menu-open");
+    }
+
+    if (navTopMenu) {
+      navTopMenu.classList.remove("menu-open-top");
+      const blahh = document.querySelector(".blahh");
+      blahh.style.paddingBottom = "2rem";
+      blahh.style.paddingTop = "2rem";
+    }
+  };
+
+  const menuOpen = () => {
+    const navBottomMenu = document.querySelector(".nav-bottom-menu");
+    if (navBottomMenu) {
+      navBottomMenu.classList.toggle("menu-open");
+    }
+  };
+
+  const menuOpenTop = () => {
+    const navTopMenu = document.querySelector(".nav-top-menu");
+    if (navTopMenu) {
+      navTopMenu.classList.toggle("menu-open-top");
+    }
+    const blahh = document.querySelector(".blahh");
+    blahh.style.paddingBottom = "2rem";
+    blahh.style.paddingTop = "2rem";
+  };
   return (
-    <nav className="absolute-center">
-      <div className="nav-top absolute-center">
-        <div className="nav-top-menu-left">
+    <nav className="absolute-center" ref={navBottomMenuRef}>
+      <div className="nav-top absolute-center" ref={navTopMenuRef}>
+        <div className="nav-top-menu-left absolute-center">
           <ul className="nav-top-menu absolute-center">
             <li className="nav-top-menu-items cur-po">
               <Link to="/">Pay Fee Online</Link>
@@ -27,6 +83,7 @@ const Navbar = () => {
               <Link to="/">CBSE Circular</Link>
             </li>
           </ul>
+          <RiMenu2Line size={20} className="blahh" onClick={menuOpenTop} />
         </div>
         <div className="nav-top-menu-right social-media-icon">
           <i className="ri-youtube-line social-media-icon"></i>
@@ -48,7 +105,7 @@ const Navbar = () => {
             About us<i className="ri-arrow-down-s-line down-arrow"></i>
             <ul className="sub-menu">
               <li className="sub-menu-items">
-                <Link to="/pmessage">Director Message</Link>
+                <Link to="/dmessage">Director Message</Link>
               </li>
               <li className="sub-menu-items">
                 <Link to="/pmessage">Principal Message</Link>
@@ -151,6 +208,9 @@ const Navbar = () => {
         <button id="apply-now" className="cur-po">
           Apply Now
         </button>
+        <div>
+          <RiMenu2Line size={20} className="blah" onClick={menuOpen} />
+        </div>
       </div>
     </nav>
   );

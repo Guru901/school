@@ -43,8 +43,18 @@
 
 @media (max-width: 1024px) {
   .mission {
-    width: 65vw;
+    width: 85vw;
     flex-direction: column-reverse;
+  }
+  .img > img {
+    width: 78vw !important;
+  }
+  .mission p {
+    font-size: 1.6rem;
+  }
+
+  .mission li {
+    font-size: 1.6rem;
   }
 }
 

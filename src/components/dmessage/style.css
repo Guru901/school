@@ -1,0 +1,48 @@
+.msg-container {
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 5rem;
+  width: 100vw;
+}
+
+.msg {
+  width: 100rem;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+}
+
+.msg p {
+  font-size: 1.6rem;
+  max-width: 85rem;
+}
+
+.msg-container > h1 {
+  font-weight: bold;
+  margin-right: 15rem;
+}
+
+h1 > span {
+  color: var(--accent);
+  font-size: inherit;
+}
+
+.msg > img {
+  width: 25rem;
+}
+
+@media (max-width: 1024px) {
+  .msg {
+    width: 95vw;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .msg > img {
+    width: 50vw;
+    max-width: 30rem;
+  }
+
+  .msgs {
+    width: 95vw;
+  }
+}

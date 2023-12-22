@@ -13,9 +13,14 @@
   max-height: 90rem;
   object-fit: cover;
 }
+
 @media (max-width: 1024px) {
   .slider {
     display: block;
     margin: auto;
+  }
+
+  .carousel-item > img {
+    height: 25rem;
   }
 }
