@@ -1,0 +1,19 @@
+.fimg > img {
+  width: 35rem;
+  border-radius: 8px;
+}
+.fimg > p {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+  .fimg > img {
+    width: 45vw;
+  }
+}
+
+@media (max-width: 425px) {
+  .fimg > img {
+    width: 85vw;
+  }
+}

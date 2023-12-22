@@ -1,0 +1,48 @@
+.differences {
+  height: 30rem;
+  flex-direction: column;
+  gap: 5rem;
+  text-align: center;
+  width: 100vw;
+  max-width: 134.4rem;
+  margin-top: 8rem;
+}
+.difference {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  height: 80%;
+  gap: 2rem;
+}
+#differences-title {
+  font-size: var(--heading-font-size);
+  color: var(--text-color);
+}
+.differences-container {
+  display: flex;
+  gap: 10rem;
+  width: 100vw;
+  max-width: 130.4rem;
+  padding: 0 1rem;
+}
+#difference-title {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+#difference-title-des {
+  font-size: var(--primary-font-size);
+}
+@media (max-width: 1300px) {
+  .differences-container {
+    gap: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .differences {
+    height: fit-content;
+  }
+  .differences-container {
+    align-items: center;
+    flex-direction: column;
+  }
+}

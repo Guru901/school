@@ -1,0 +1,59 @@
+footer {
+  height: 80rem;
+  flex-direction: column;
+  background: #00205b;
+  gap: 2rem;
+  padding-top: 12rem;
+  width: 100%;
+}
+
+#footer-title {
+  font-size: var(--heading-font-size);
+  color: white;
+}
+
+#footer-title-des {
+  font-size: var(--primary-font-size);
+  color: white;
+}
+
+.social-icons {
+  gap: 2rem;
+  display: flex;
+}
+
+.social-icon {
+  color: white;
+  font-size: 2rem;
+}
+
+.footer-list-container {
+  gap: 6rem;
+  height: max-content;
+}
+
+.footer-list-items {
+  color: white;
+  list-style: none;
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+}
+
+.footer-list-items > p {
+  color: white;
+  font-size: var(--primary-font-size);
+  border-bottom: 1px solid whitesmoke;
+}
+
+.right-arr-icon {
+  font-size: var(--primary-font-size);
+}
+
+.fb-conatiner {
+  padding: 5rem;
+}
+
+.footer-list-fb-wrapper {
+  gap: 2rem;
+}

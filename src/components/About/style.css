@@ -1,0 +1,142 @@
+.about {
+  flex-direction: column;
+  width: 95vw;
+  overflow: hidden;
+  padding: 2rem;
+  max-width: 134.4rem;
+}
+.about-title {
+  margin-top: 2rem;
+  color: var(--text-color);
+  font-size: var(--heading-font-size);
+}
+.title-img {
+  width: 10rem;
+  margin-top: 2rem;
+}
+.about-paras,
+.sample-img {
+  object-fit: cover;
+  width: 50rem;
+}
+.about-paras {
+  width: 70rem;
+  height: auto;
+  letter-spacing: 0.1rem;
+}
+.sample-img {
+  border-radius: 6px;
+}
+.about-p-1,
+.about-p-2 {
+  font-size: var(--primary-font-size);
+}
+.about-des {
+  margin-top: 5rem;
+  color: var(--text-color);
+}
+#about-us-read-more {
+  background: #ff8400;
+  text-transform: uppercase;
+  border: 1px solid #ff8400;
+  width: 13rem;
+  font-size: var(--small-font-size);
+  color: #fff;
+  height: 4rem;
+  border-radius: 6px;
+  transition: 0.2s;
+  margin-right: 107rem;
+}
+#about-us-read-more:hover {
+  transition: 0.2s;
+  background: white;
+  color: #ff8400;
+}
+.slider-small {
+  padding-top: 6rem;
+  display: flex;
+  gap: 3rem;
+}
+.slider-img {
+  width: 35rem;
+  object-fit: cover;
+}
+@media (max-width: 1024px) {
+  .slider-small img:nth-child(2) {
+    display: none;
+  }
+  .img-container {
+    width: 30rem;
+  }
+  .about-paras {
+    width: 50rem;
+  }
+  .about-des {
+    gap: 2rem;
+  }
+  .about-paras p {
+    font-size: 1.2rem;
+  }
+  #about-us-read-more {
+    margin-right: 69rem;
+  }
+  .sample-img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .slider-small img:nth-child(2) {
+    display: none;
+  }
+  .img-container {
+    width: 30rem;
+  }
+  .about-paras {
+    width: 50rem;
+  }
+  .about-des {
+    gap: 2rem;
+  }
+  .about-paras p {
+    font-size: 1.2rem;
+  }
+  #about-us-read-more {
+    margin-right: 69rem;
+  }
+  .sample-img {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .sample-img {
+    width: 25rem;
+  }
+  .about {
+    justify-content: center;
+  }
+  .about-des {
+    margin-top: 5rem;
+    transform: translate(2.3rem);
+    color: var(--text-color);
+  }
+  #about-us-read-more {
+    margin-right: 64rem;
+  }
+}
+@media (max-width: 645px) {
+  .about-des {
+    flex-direction: column-reverse;
+  }
+  #about-us-read-more {
+    margin-right: 0;
+    width: 62%;
+  }
+  .sample-img {
+    width: 45rem;
+    transform: translate(-9rem);
+  }
+  .slider-img {
+    width: 25rem;
+  }
+}

@@ -1,0 +1,156 @@
+nav {
+  width: 100%;
+  flex-direction: column;
+  width: 100vw;
+  max-width: 134.4rem;
+}
+.nav-top {
+  border-bottom: 1px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 40rem;
+}
+.nav-top-menu,
+.nav-bottom-menu {
+  height: 5rem;
+  float: left;
+  padding-left: 5rem;
+  gap: 3rem;
+}
+.nav-top-menu-items,
+.nav-bottom-menu-items {
+  list-style: none;
+  font-size: var(--small-font-size);
+  text-transform: uppercase;
+}
+.nav-top-menu-items > a,
+.nav-bottom-menu-items > a,
+.sub-menu-items > a {
+  color: #000;
+  text-decoration: none;
+}
+.nav-top-menu-right {
+  display: flex;
+  gap: 1rem;
+}
+.social-media-icon {
+  font-size: 2rem;
+}
+.nav-bottom {
+  display: flex;
+  margin-top: 1rem;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+#logo {
+  width: 35rem;
+}
+.nav-bottom-menu-items {
+  font-size: var(--primary-font-size);
+}
+.down-arrow {
+  font-size: 1.4rem;
+}
+#apply-now {
+  font-size: var(--primary-font-size);
+  background: #ff8400;
+  width: 10rem;
+  height: 3rem;
+  border: 1px solid #ff8400;
+  transition: 0.1s;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+#apply-now:hover {
+  border: 1px solid #ff8400;
+  transition: 0.2s;
+  color: #ff8400;
+  background: white;
+}
+.sub-menu {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 0.1s;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 2rem;
+  background: #dadada;
+  border-radius: 6px;
+  padding: 1.6rem;
+  width: 17rem;
+  z-index: 99;
+}
+.nav-bottom-menu-items:hover {
+  color: #008d42;
+}
+.nav-bottom-menu-items:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transition: 0.1s;
+  color: #000;
+}
+.sub-menu-items {
+  list-style: none;
+  transition: 0.2s;
+}
+
+.sub-menu-items a {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.sub-menu-items:hover {
+  transform: translate(1rem);
+  color: #008d42;
+  transition: 0.2s;
+}
+
+.sub-menu-items:hover a {
+  color: #008d42;
+}
+.menu-btn-icon,
+.menu-btn,
+.close-btn,
+.menu-close-icon {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .menu-btn,
+  .close-btn {
+    display: block;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+  }
+  .nav-bottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menu-btn-icon,
+  .menu-close-icon {
+    font-size: 2rem;
+  }
+  .nav-bottom-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 14rem;
+  }
+  .menu-open {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav-top {
+    gap: 11rem;
+  }
+}

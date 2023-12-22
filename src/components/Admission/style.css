@@ -1,0 +1,55 @@
+.admissions {
+  background: #e0eaf6;
+  margin-top: 10rem;
+  height: 40rem;
+  gap: 10rem;
+  width: 100vw;
+  max-width: 134.9rem;
+}
+.admission {
+  flex-direction: column;
+  background: white;
+  width: 25rem;
+  height: 80%;
+  gap: 1rem;
+  transition: 0.2s;
+}
+.admission-title {
+  font-size: 2.2rem;
+  color: #008d42;
+  border-top: 1px solid #02ac51;
+  border-bottom: 1px solid #02ac51;
+  color: var(--text-color);
+  padding: 1rem;
+}
+.admission-title-des {
+  font-size: var(--primary-font-size);
+  color: #008d42;
+}
+.admission:hover {
+  background: #008d42;
+}
+.admission:hover .admission-title,
+.admission:hover .admission-title-des {
+  color: #fff;
+  transition: 0.2s;
+}
+.admission:hover .admission-title {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+@media (max-width: 1000px) {
+  .admission {
+    width: 20rem;
+  }
+}
+@media (max-width: 768px) {
+  .admissions {
+    flex-direction: column;
+    padding: 3rem 0;
+    height: fit-content;
+  }
+  .admission {
+    height: 30rem;
+  }
+}

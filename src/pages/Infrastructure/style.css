@@ -1,0 +1,38 @@
+.fimgs-container {
+  margin-top: 5rem;
+  padding: 5rem;
+}
+
+.fimgss {
+  display: grid;
+  margin-top: 5rem;
+  grid-template-columns: repeat(3, 35rem);
+  column-gap: 3rem;
+  row-gap: 3rem;
+  overflow: hidden;
+  place-items: center;
+}
+
+@media (max-width: 1140px) {
+  .fimgss {
+    grid-template-columns: repeat(2, 35rem);
+    column-gap: 1vw;
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .fimgss {
+    grid-template-columns: repeat(2, 45vw);
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .fimgss {
+    grid-template-columns: repeat(1, 85vw);
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+}

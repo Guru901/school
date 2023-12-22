@@ -1,0 +1,36 @@
+.students {
+  width: 80rem;
+  margin-top: 15rem;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 134.4rem;
+}
+#students-title {
+  color: var(--text-color);
+  font-size: var(--heading-font-size);
+  text-align: center;
+}
+#students-title-des {
+  font-size: var(--primary-font-size);
+  text-align: center;
+  color: var(--text-color);
+}
+.student-images {
+  height: 50rem;
+  width: 100vw;
+  max-width: 110rem;
+  background: red;
+}
+@media (max-width: 1024px) {
+  .students {
+    width: 90vw;
+  }
+  .student-images {
+    width: 100rem;
+  }
+}
+@media (max-width: 768px) {
+  .student-images {
+    width: 85vw;
+  }
+}

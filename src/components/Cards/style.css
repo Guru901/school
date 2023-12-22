@@ -1,0 +1,17 @@
+.cards {
+  height: 10rem;
+  max-width: 134.4rem;
+  width: 100vw;
+}
+.card-1,
+.card-2,
+.card-3 {
+  height: 10rem;
+  width: 44.96rem;
+  border-right: 1px dotted black;
+}
+.card-title {
+  color: var(--text-color);
+  font-size: 2rem;
+  text-align: center;
+}

@@ -1,0 +1,6 @@
+.msgimg > img {
+  margin-top: 5rem;
+  height: 30rem;
+  width: 100vw;
+  object-fit: cover;
+}
