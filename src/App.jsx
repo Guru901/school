@@ -10,8 +10,15 @@ import Infrastructure from "./pages/Infrastructure";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const App = () => {
+  document.addEventListener("mousemove", (dets) => {
+    const cur = document.querySelector(".cur");
+    cur.style.left = dets.pageX + "px";
+    cur.style.top = dets.pageY + "px";
+  });
+
   return (
     <>
+      <div className="cur"></div>
       <BrowserRouter>
         <Navbar />
         <Routes>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap");
 
 :root {
   --accent: #cd2653;
@@ -9,12 +9,13 @@
   --primary-font-size: 1.4rem;
   --small-font-size: 1.2rem;
   --text-color: #454545;
+  --max-width: 135rem;
 }
 * {
   margin: 0;
   padding: 0;
   font-size: 10px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
 }
 
@@ -24,9 +25,9 @@
 
 html,
 body {
-  width: 100% !important;
-  height: 100% !important ;
-  overflow-x: hidden;
+  width: 100%;
+  overflow-x: clip;
+  height: 100%;
 }
 
 #main {
@@ -53,4 +54,24 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.cur {
+  position: absolute;
+  width: 15px;
+  top: 0;
+  left: 0;
+  mix-blend-mode: darken;
+  height: 15px;
+  border-radius: 50%;
+  background: #000;
+  pointer-events: none;
+  z-index: 99999;
+  transition: 0.1s ease-out;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1024px) {
+  .cur {
+    display: none;
+  }
 }

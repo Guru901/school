@@ -5,6 +5,8 @@ footer {
   gap: 2rem;
   padding-top: 12rem;
   width: 100%;
+  max-width: var(--max-width);
+  overflow: clip;
 }
 
 #footer-title {

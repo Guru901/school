@@ -1,85 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Fimg from "../../components/fimg";
 import "./style.css";
+import Msgimg from "../../components/msgimg";
 
 const Infrastructure = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch("http://localhost:3002", {
+          method: "GET",
+        });
+        const fetchedData = await response.json();
+        setData(fetchedData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    fetchData();
+  }, []);
+
   return (
-    <div className="fimgs-container absolute-center">
-      <div className="fimgss">
-        <Fimg
-          src="https://rpsjhalawar.com/uploads/nky7yk9gf284ws4okk.jpg"
-          title="PRE-PRIMARY WING"
-        />
-        <Fimg
-          src="https://rpsjhalawar.com/uploads/bxzgqnqwe48wcg8cg.jpg"
-          title="PRE-PRIMARY WING"
-        />
-        <Fimg
-          src="https://rpsjhalawar.com/uploads/kbuz9clp08gsk404o8.jpg"
-          title="PRE-PRIMARY WING"
-        />
-        <Fimg
-          src="https://rpsjhalawar.com/uploads/9gsvs54bj9wcsok4c4.jpg"
-          title="PRE-PRIMARY WING"
-        />
-        <Fimg
-          src="https://rpsjhalawar.com/uploads/jiqglxg8t0gk0ss8so.jpg"
-          title="PRE-PRIMARY WING"
-        />
-        <Fimg
-          src="https://rpsjhalawar.com/uploads/d40ztsxdfo0808gok.jpg"
-          title="PRE-PRIMARY WING"
-        />
-        <Fimg
-          src="https://rpsjhalawar.com/uploads/660kpz9ilvggs44o8w.jpg"
-          title="SPORTS FACILITIES"
-        />
-        <Fimg
-          src="https://rpsjhalawar.com/uploads/d9xyq0741hc0w0gk4w.jpg"
-          title="SPORTS FACILITIES"
-        />
-        <Fimg
-          src="https://rpsjhalawar.com/uploads/1vfys6dgxcsg0os00k.jpg"
-          title="SPORTS FACILITIES"
-        />
-        <Fimg
-          src="https://rpsjhalawar.com/uploads/dg4ls1o789sg4s4wk0.jpg"
-          title="SPORTS FACILITIES"
-        />
-        <Fimg
-          src="https://rpsjhalawar.com/uploads/1rydtchzsf0g0g4koc.jpg"
-          title="SPORTS FACILITIES"
-        />
-        <Fimg
-          src="https://rpsjhalawar.com/uploads/6trfqion7fcwswkgw.jpg"
-          title="SPORTS FACILITIES"
-        />
-        <Fimg
-          src="https://rpsjhalawar.com/uploads/1s84ql5pdmf44kk4kw.jpg"
-          title="School Cinema"
-        />
-        <Fimg
-          src="https://rpsjhalawar.com/uploads/1zw0435tfjgkgo8cwk.jpg"
-          title="School Cinema"
-        />
-        <Fimg
-          src="https://rpsjhalawar.com/uploads/nz1lvwvwco0g088cck.jpg"
-          title="Bio Lab"
-        />
-        <Fimg
-          src="https://rpsjhalawar.com/uploads/2zup3234n36s4kog8k.jpg"
-          title="Physics Lab"
-        />
-        <Fimg
-          src="https://rpsjhalawar.com/uploads/u9mfdmyj1es4k4kkgs.jpg"
-          title="Chemistry Lab"
-        />
-        <Fimg
-          src="https://rpsjhalawar.com/uploads/37prv6vj13uooksg8s.jpg"
-          title="Computer Lab"
-        />
+    <>
+      <Msgimg src="https://images.unsplash.com/photo-1698685425028-49105e29e793?auto=format&fit=crop&q=80&w=1632&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+      <div className="fimgs-container absolute-center">
+        <div className="fimgss">
+          {data.map((item) => (
+            <Fimg key={item.id} src={item.src} title={item.title} />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

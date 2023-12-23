@@ -10,10 +10,10 @@
 }
 .diversity-img-container {
   display: grid;
-  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: repeat(3, 399px);
   grid-template-rows: repeat(2, 300px);
   row-gap: 18rem;
-  column-gap: 15rem;
+  column-gap: 8rem;
 }
 .diversity-img-1,
 .diversity-img-2,
@@ -64,7 +64,7 @@
   }
 }
 @media (max-width: 645px) {
-  .diversity  {
+  .diversity {
     width: 100% !important;
   }
   .diversity-img-container {
@@ -83,5 +83,21 @@
   .diversity-img-container {
     grid-template-columns: repeat(2, 150px);
     grid-template-rows: repeat(2, 150px);
+  }
+  .diversity-img-1,
+  .diversity-img-2,
+  .diversity-img-3,
+  .diversity-img-4,
+  .diversity-img-5,
+  .diversity-img-6 {
+    width: 85vw;
+  }
+  .diversity-img-1 > img,
+  .diversity-img-2 > img,
+  .diversity-img-3 > img,
+  .diversity-img-4 > img,
+  .diversity-img-5 > img,
+  .diversity-img-6 > img {
+    width: 100%;
   }
 }
